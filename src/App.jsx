@@ -10,6 +10,13 @@ import Chatbot from './pages/Chatbot';
 import Consultation from './pages/Consultation';
 import Reminder from './pages/Reminder';
 import Prescription from './pages/Prescription';
+import GenericMedicines from './pages/GenericMedicines';
+import MedicalEquipment from './pages/MedicalEquipment';
+import MedicalMachines from './pages/MedicalMachines';
+import CleaningProducts from './pages/CleaningProducts';
+import Supplements from './pages/Supplements';
+import Skincare from './pages/Skincare';
+import ProductDetail from './pages/ProductDetail';
 
 function App() {
   return (
@@ -25,6 +32,13 @@ function App() {
           <Route path="consultation" element={<Consultation />} />
           <Route path="reminder" element={<Reminder />} />
           <Route path="prescription" element={<Prescription />} />
+          <Route path="generic-medicines" element={<GenericMedicines />} />
+          <Route path="medical-equipment" element={<MedicalEquipment />} />
+          <Route path="medical-machines" element={<MedicalMachines />} />
+          <Route path="cleaning-products" element={<CleaningProducts />} />
+          <Route path="supplements" element={<Supplements />} />
+          <Route path="skincare" element={<Skincare />} />
+          <Route path="product/:id" element={<ProductDetail />} />
         </Route>
         <Route path="login" element={<Login />} />
       </Routes>

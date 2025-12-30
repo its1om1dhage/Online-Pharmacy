@@ -1,0 +1,108 @@
+import { useNavigate } from 'react-router-dom';
+
+const MedicalEquipment = () => {
+  const navigate = useNavigate();
+
+  const products = [
+    {
+      id: 7,
+      name: 'Digital Thermometer',
+      price: 250,
+      image: '/products/thermometer.jpg',
+      info: 'Quick and accurate temperature reading'
+    },
+    {
+      id: 8,
+      name: 'Blood Pressure Monitor',
+      price: 1500,
+      image: '/products/bp-monitor.jpg',
+      info: 'Automatic BP measurement'
+    },
+    {
+      id: 9,
+      name: 'Pulse Oximeter',
+      price: 800,
+      image: '/products/oximeter.jpg',
+      info: 'Measures oxygen saturation'
+    },
+    {
+      id: 10,
+      name: 'Nebulizer Machine',
+      price: 2500,
+      image: '/products/nebulizer.jpg',
+      info: 'For respiratory treatments'
+    },
+    {
+      id: 11,
+      name: 'Stethoscope',
+      price: 1200,
+      image: '/products/stethoscope.jpg',
+      info: 'Professional grade acoustic'
+    },
+    {
+      id: 12,
+      name: 'Surgical Gloves (100pc)',
+      price: 350,
+      image: '/products/gloves.jpg',
+      info: 'Latex-free disposable gloves'
+    }
+  ];
+
+  return (
+    <div className="min-h-[calc(100vh-20rem)] py-12 px-4">
+      {/* Back Button */}
+      <button
+        onClick={() => navigate('/')}
+        className="fixed top-20 left-6 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+      </button>
+
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl font-bold text-gray-800 mb-8">Medical Equipment</h1>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              onClick={() => navigate(`/product/${product.id}`)}
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all hover:scale-105 cursor-pointer overflow-hidden border border-gray-200"
+            >
+              <div className="aspect-square bg-gray-100 relative">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200"%3E%3Crect width="200" height="200" fill="%23f3f4f6"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%239ca3af"%3ENo Image%3C/text%3E%3C/svg%3E';
+                  }}
+                />
+              </div>
+
+              <div className="p-3">
+                <h3 className="font-semibold text-sm text-gray-800 mb-1 line-clamp-2">
+                  {product.name}
+                </h3>
+                <p className="text-xs text-gray-600 mb-2 line-clamp-2">
+                  {product.info}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-red-600 font-bold text-lg">
+                    ₹{product.price}
+                  </span>
+                  <button className="bg-gradient-to-r from-red-500 to-red-700 text-white px-3 py-1 rounded-lg text-xs font-medium hover:shadow-lg transition-all">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MedicalEquipment;
