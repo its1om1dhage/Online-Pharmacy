@@ -1,5 +1,3 @@
-import EmptyCart from '../components/cart/EmptyCart';
-
 const Cart = () => {
   return (
     <div className="min-h-[calc(100vh-20rem)] py-12 px-4">
@@ -7,7 +5,22 @@ const Cart = () => {
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
           Shopping <span className="text-primary-red">Cart</span>
         </h1>
-        <EmptyCart />
+        
+        {/* Empty Cart State */}
+        <div className="flex flex-col items-center justify-center py-16 px-4">
+          <div className="bg-white rounded-2xl shadow-lg p-12 max-w-md w-full text-center">
+            <div className="mb-6">
+              <svg className="w-24 h-24 mx-auto text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Your cart is empty</h2>
+            <p className="text-gray-600 mb-8">Looks like you haven't added any items to your cart yet.</p>
+            <a href="/" className="inline-block px-8 py-4 bg-gradient-to-r from-[#FF7B7B] via-[#FF3333] via-[#DD0000] via-[#AA0000] to-[#660000] text-white font-semibold rounded-xl hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all">
+              Start Shopping
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
