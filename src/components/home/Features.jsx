@@ -67,21 +67,21 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-8 md:py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+    <section className="py-6 sm:py-8 md:py-12 bg-white">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
           {features.map((feature, index) => (
             <div 
               key={index}
               onClick={() => navigate(feature.path)}
-              className="group bg-white p-4 rounded-xl border border-gray-200 hover:border-red-500 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
+              className="group bg-white p-3 sm:p-4 rounded-xl border border-gray-200 hover:border-red-500 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
             >
-              <div className="text-red-600 mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
-                <div className="scale-75">
+              <div className="text-red-600 mb-1.5 sm:mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                <div className="scale-[0.65] sm:scale-75">
                   {feature.icon}
                 </div>
               </div>
-              <h3 className="text-sm font-semibold text-gray-900 text-center group-hover:text-red-600 transition-colors duration-300">
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-900 text-center group-hover:text-red-600 transition-colors duration-300 leading-tight">
                 {feature.title}
               </h3>
             </div>

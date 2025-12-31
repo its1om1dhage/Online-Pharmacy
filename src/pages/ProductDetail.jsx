@@ -381,11 +381,11 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="min-h-[calc(100vh-20rem)] py-12 px-4">
+    <div className="min-h-[calc(100vh-20rem)] py-6 sm:py-8 md:py-12 px-3 sm:px-4">
       {/* Back Button */}
       <button
         onClick={() => navigate(-1)}
-        className="fixed top-20 left-6 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
+        className="fixed top-20 left-3 sm:left-6 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -393,14 +393,14 @@ const ProductDetail = () => {
       </button>
 
       <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-8 p-8">
+        <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8">
             {/* Product Image */}
-            <div className="bg-gray-100 rounded-xl overflow-hidden">
+            <div className="bg-gray-100 rounded-xl overflow-hidden aspect-square md:aspect-auto">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-contain p-8"
+                className="w-full h-full object-contain p-4 sm:p-6 md:p-8"
                 onError={(e) => {
                   e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400"%3E%3Crect width="400" height="400" fill="%23f3f4f6"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="20" fill="%239ca3af"%3ENo Image%3C/text%3E%3C/svg%3E';
                 }}
@@ -410,33 +410,33 @@ const ProductDetail = () => {
             {/* Product Info */}
             <div className="flex flex-col">
               <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-red-100 text-red-600 text-sm font-medium rounded-full mb-3">
+                <span className="inline-block px-3 py-1 bg-red-100 text-red-600 text-xs sm:text-sm font-medium rounded-full mb-2 sm:mb-3">
                   {product.category}
                 </span>
-                <h1 className="text-3xl font-bold text-gray-800 mb-3">
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2 sm:mb-3">
                   {product.name}
                 </h1>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                   {product.info}
                 </p>
               </div>
 
-              <div className="mb-6">
-                <h2 className="text-lg font-semibold text-gray-800 mb-2">Description</h2>
-                <p className="text-gray-600 leading-relaxed">
+              <div className="mb-4 sm:mb-6">
+                <h2 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Description</h2>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   {product.description}
                 </p>
               </div>
 
-              <div className="mb-6">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-red-600">₹{product.price}</span>
-                  <span className="text-gray-500 text-sm">(inclusive of all taxes)</span>
+              <div className="mb-4 sm:mb-6">
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <span className="text-3xl sm:text-4xl font-bold text-red-600">₹{product.price}</span>
+                  <span className="text-gray-500 text-xs sm:text-sm">(inclusive of all taxes)</span>
                 </div>
               </div>
 
               {/* Quantity Selector */}
-              <div className="mb-6">
+              <div className="mb-4 sm:mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Quantity
                 </label>
@@ -462,16 +462,16 @@ const ProductDetail = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-4 mt-auto">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-auto">
                 <button
                   onClick={handleAddToCart}
-                  className="flex-1 px-6 py-3 bg-white border-2 border-red-500 text-red-500 rounded-lg font-semibold hover:bg-red-50 transition-all"
+                  className="flex-1 px-4 sm:px-6 py-3 bg-white border-2 border-red-500 text-red-500 rounded-lg font-semibold hover:bg-red-50 transition-all text-sm sm:text-base"
                 >
                   Add to Cart
                 </button>
                 <button
                   onClick={handleOrderNow}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-[#FF7B7B] via-[#FF3333] via-[#DD0000] via-[#AA0000] to-[#660000] text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+                  className="flex-1 px-4 sm:px-6 py-3 bg-gradient-to-r from-[#FF7B7B] via-[#FF3333] via-[#DD0000] via-[#AA0000] to-[#660000] text-white rounded-lg font-semibold hover:shadow-lg transition-all text-sm sm:text-base"
                 >
                   Order Now
                 </button>

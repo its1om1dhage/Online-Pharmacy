@@ -35,11 +35,11 @@ const Hero = () => {
   }, [currentSlide]);
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-gray-50 to-white pt-0 pb-8 md:pb-12">
+    <section className="relative w-full bg-gradient-to-b from-gray-50 to-white pt-0 pb-6 sm:pb-8 md:pb-12">
       {/* Container with proper spacing */}
-      <div className="relative w-full max-w-7xl mx-auto px-4 md:px-8">
+      <div className="relative w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
         {/* Slider Container with rounded corners and shadow */}
-        <div className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl">
           {/* Slides */}
           {slides.map((image, index) => (
             <div
@@ -60,15 +60,15 @@ const Hero = () => {
           ))}
 
           {/* Gradient Border Glow Effect */}
-          <div className="absolute inset-0 rounded-3xl ring-1 ring-red-500/20 pointer-events-none" />
+          <div className="absolute inset-0 rounded-2xl sm:rounded-3xl ring-1 ring-red-500/20 pointer-events-none" />
           
           {/* Navigation Arrows - Red Gradient with Glow */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-10 group"
+            className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-10 group"
           >
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center transition-all duration-300 shadow-lg shadow-red-500/50 hover:shadow-xl hover:shadow-red-500/80 hover:scale-110 hover:from-red-600 hover:to-red-800">
-              <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center transition-all duration-300 shadow-lg shadow-red-500/50 hover:shadow-xl hover:shadow-red-500/80 hover:scale-110 hover:from-red-600 hover:to-red-800">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
               </svg>
             </div>
@@ -76,19 +76,19 @@ const Hero = () => {
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-10 group"
+            className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-10 group"
           >
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center transition-all duration-300 shadow-lg shadow-red-500/50 hover:shadow-xl hover:shadow-red-500/80 hover:scale-110 hover:from-red-600 hover:to-red-800">
-              <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center transition-all duration-300 shadow-lg shadow-red-500/50 hover:shadow-xl hover:shadow-red-500/80 hover:scale-110 hover:from-red-600 hover:to-red-800">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
             </div>
           </button>
 
           {/* Enhanced Pagination */}
-          <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10">
+          <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10">
             {/* Dots with Gradient */}
-            <div className="flex gap-2 md:gap-3">
+            <div className="flex gap-1.5 sm:gap-2 md:gap-3">
               {slides.map((_, index) => (
                 <button
                   key={index}
@@ -98,8 +98,8 @@ const Hero = () => {
                   }}
                   className={`transition-all duration-300 ${
                     index === currentSlide
-                      ? 'w-10 md:w-12 h-3 bg-gradient-to-r from-red-500 to-red-700 rounded-full shadow-lg shadow-red-500/50'
-                      : 'w-3 h-3 bg-white/80 hover:bg-white rounded-full hover:scale-110'
+                      ? 'w-8 sm:w-10 md:w-12 h-2.5 sm:h-3 bg-gradient-to-r from-red-500 to-red-700 rounded-full shadow-lg shadow-red-500/50'
+                      : 'w-2.5 sm:w-3 h-2.5 sm:h-3 bg-white/80 hover:bg-white rounded-full hover:scale-110'
                   }`}
                 />
               ))}

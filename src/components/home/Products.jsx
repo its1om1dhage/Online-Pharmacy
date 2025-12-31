@@ -294,8 +294,8 @@ const Products = () => {
   };
 
   return (
-    <div className="py-8 px-4">
-      <div className="max-w-7xl mx-auto space-y-8">
+    <div className="py-6 sm:py-8 px-3 sm:px-4">
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         {categories.map((category) => {
           const categoryProducts = products[category.id];
           const displayedProducts = categoryProducts.slice(0, 5);
@@ -303,10 +303,10 @@ const Products = () => {
           return (
             <div 
               key={category.id}
-              className="border-2 border-gray-300 rounded-xl p-6 bg-white"
+              className="border-2 border-gray-300 rounded-xl p-4 sm:p-6 bg-white"
             >
               {/* Category Header */}
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
                 {category.name}
               </h2>
 
@@ -352,10 +352,10 @@ const Products = () => {
               </div>
 
               {/* Show More Button */}
-              <div className="mt-6 text-center">
+              <div className="mt-4 sm:mt-6 text-center">
                 <button
                   onClick={() => navigate(category.path)}
-                  className="px-6 py-2 bg-gradient-to-r from-[#FF7B7B] via-[#FF3333] via-[#DD0000] via-[#AA0000] to-[#660000] text-white rounded-lg font-medium hover:shadow-lg transition-all"
+                  className="px-5 sm:px-6 py-2 bg-gradient-to-r from-[#FF7B7B] via-[#FF3333] via-[#DD0000] via-[#AA0000] to-[#660000] text-white rounded-lg text-sm sm:text-base font-medium hover:shadow-lg transition-all"
                 >
                   Show More
                 </button>
