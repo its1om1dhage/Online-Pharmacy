@@ -355,7 +355,7 @@ const Products = () => {
               <div className="mt-6 text-center">
                 <button
                   onClick={() => navigate(category.path)}
-                  className="px-6 py-2 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg font-medium hover:shadow-lg transition-all"
+                  className="px-6 py-2 bg-gradient-to-r from-[#FF7B7B] via-[#FF3333] via-[#DD0000] via-[#AA0000] to-[#660000] text-white rounded-lg font-medium hover:shadow-lg transition-all"
                 >
                   Show More
                 </button>

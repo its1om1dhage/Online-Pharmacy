@@ -5,42 +5,42 @@ const MedicalEquipment = () => {
 
   const products = [
     {
-      id: 7,
+      id: 9,
       name: 'Digital Thermometer',
       price: 250,
       image: '/products/thermometer.jpg',
       info: 'Quick and accurate temperature reading'
     },
     {
-      id: 8,
+      id: 10,
       name: 'Blood Pressure Monitor',
       price: 1500,
       image: '/products/bp-monitor.jpg',
       info: 'Automatic BP measurement'
     },
     {
-      id: 9,
+      id: 11,
       name: 'Pulse Oximeter',
       price: 800,
       image: '/products/oximeter.jpg',
       info: 'Measures oxygen saturation'
     },
     {
-      id: 10,
+      id: 12,
       name: 'Nebulizer Machine',
       price: 2500,
       image: '/products/nebulizer.jpg',
       info: 'For respiratory treatments'
     },
     {
-      id: 11,
+      id: 13,
       name: 'Stethoscope',
       price: 1200,
       image: '/products/stethoscope.jpg',
       info: 'Professional grade acoustic'
     },
     {
-      id: 12,
+      id: 14,
       name: 'Surgical Gloves (100pc)',
       price: 350,
       image: '/products/gloves.jpg',

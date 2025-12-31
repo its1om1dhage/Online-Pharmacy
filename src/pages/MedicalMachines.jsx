@@ -5,42 +5,42 @@ const MedicalMachines = () => {
 
   const products = [
     {
-      id: 13,
+      id: 15,
       name: 'ECG Machine',
       price: 45000,
       image: '/products/ecg.jpg',
       info: '12-lead electrocardiogram'
     },
     {
-      id: 14,
+      id: 16,
       name: 'Oxygen Concentrator',
       price: 35000,
       image: '/products/oxygen-concentrator.jpg',
       info: 'Portable oxygen therapy'
     },
     {
-      id: 15,
+      id: 17,
       name: 'Suction Machine',
       price: 8500,
       image: '/products/suction.jpg',
       info: 'Medical grade suction device'
     },
     {
-      id: 16,
+      id: 18,
       name: 'Infusion Pump',
       price: 25000,
       image: '/products/infusion-pump.jpg',
       info: 'Controlled fluid delivery'
     },
     {
-      id: 17,
+      id: 19,
       name: 'Autoclave Sterilizer',
       price: 18000,
       image: '/products/autoclave.jpg',
       info: 'High-pressure steam sterilization'
     },
     {
-      id: 18,
+      id: 20,
       name: 'Ultrasound Scanner',
       price: 125000,
       image: '/products/ultrasound.jpg',

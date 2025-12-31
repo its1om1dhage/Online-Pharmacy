@@ -5,42 +5,42 @@ const Supplements = () => {
 
   const products = [
     {
-      id: 25,
+      id: 27,
       name: 'Multivitamin Tablets',
       price: 350,
       image: '/products/multivitamin.jpg',
       info: 'Complete daily nutrition'
     },
     {
-      id: 26,
+      id: 28,
       name: 'Vitamin D3 1000IU',
       price: 280,
       image: '/products/vitamin-d.jpg',
       info: 'Bone health support'
     },
     {
-      id: 27,
+      id: 29,
       name: 'Omega-3 Fish Oil',
       price: 450,
       image: '/products/omega3.jpg',
       info: 'Heart and brain health'
     },
     {
-      id: 28,
+      id: 30,
       name: 'Calcium + Magnesium',
       price: 320,
       image: '/products/calcium.jpg',
       info: 'Bone strength formula'
     },
     {
-      id: 29,
+      id: 31,
       name: 'Protein Powder 1kg',
       price: 1200,
       image: '/products/protein.jpg',
       info: 'Whey protein isolate'
     },
     {
-      id: 30,
+      id: 32,
       name: 'Zinc 50mg',
       price: 180,
       image: '/products/zinc.jpg',

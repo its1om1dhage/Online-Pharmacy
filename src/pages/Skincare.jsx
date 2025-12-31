@@ -5,42 +5,42 @@ const Skincare = () => {
 
   const products = [
     {
-      id: 31,
+      id: 33,
       name: 'Sunscreen SPF 50',
       price: 350,
       image: '/products/sunscreen.jpg',
       info: 'Broad spectrum UV protection'
     },
     {
-      id: 32,
+      id: 34,
       name: 'Moisturizing Cream',
       price: 280,
       image: '/products/moisturizer.jpg',
       info: 'Hydrating skin care'
     },
     {
-      id: 33,
+      id: 35,
       name: 'Acne Treatment Gel',
       price: 420,
       image: '/products/acne-gel.jpg',
       info: 'Salicylic acid formula'
     },
     {
-      id: 34,
+      id: 36,
       name: 'Anti-aging Serum',
       price: 650,
       image: '/products/serum.jpg',
       info: 'Vitamin C and retinol'
     },
     {
-      id: 35,
+      id: 37,
       name: 'Face Wash 150ml',
       price: 220,
       image: '/products/facewash.jpg',
       info: 'Gentle daily cleanser'
     },
     {
-      id: 36,
+      id: 38,
       name: 'Lip Balm SPF 15',
       price: 120,
       image: '/products/lip-balm.jpg',

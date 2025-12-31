@@ -471,7 +471,7 @@ const ProductDetail = () => {
                 </button>
                 <button
                   onClick={handleOrderNow}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-red-500 to-red-700 text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-[#FF7B7B] via-[#FF3333] via-[#DD0000] via-[#AA0000] to-[#660000] text-white rounded-lg font-semibold hover:shadow-lg transition-all"
                 >
                   Order Now
                 </button>

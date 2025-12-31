@@ -5,42 +5,42 @@ const CleaningProducts = () => {
 
   const products = [
     {
-      id: 19,
+      id: 21,
       name: 'Hand Sanitizer 500ml',
       price: 150,
       image: '/products/sanitizer.jpg',
       info: '70% alcohol based formula'
     },
     {
-      id: 20,
+      id: 22,
       name: 'Disinfectant Spray',
       price: 200,
       image: '/products/disinfectant.jpg',
       info: 'Kills 99.9% germs'
     },
     {
-      id: 21,
+      id: 23,
       name: 'Surgical Spirit 500ml',
       price: 120,
       image: '/products/surgical-spirit.jpg',
       info: 'Antiseptic solution'
     },
     {
-      id: 22,
+      id: 24,
       name: 'Medical Grade Wipes',
       price: 180,
       image: '/products/wipes.jpg',
       info: 'Antibacterial cleaning wipes'
     },
     {
-      id: 23,
+      id: 25,
       name: 'Hydrogen Peroxide',
       price: 95,
       image: '/products/hydrogen-peroxide.jpg',
       info: 'Wound cleaning solution'
     },
     {
-      id: 24,
+      id: 26,
       name: 'Cotton Balls (100pc)',
       price: 60,
       image: '/products/cotton-balls.jpg',
